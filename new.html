@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Audio and Video</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 20px;
+      }
+      h1 {
+        color: #ff6347;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      iframe, video, audio {
+        display: block;
+        margin: 0 auto 20px auto;
+        border: 2px solid #ff6347;
+        border-radius: 8px;
+      }
+      p {
+        text-align: center;
+        font-size: 1.2em;
+        color: #666;
+      }
+      div {
+        text-align: center;
+        margin-top: 20px;
+      }
+      button {
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #ff4500;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Video</h1>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe><br>
+
+    <video id="myvideo" src="https://www.w3schools.com/html/mov_bbb.mp4" controls>
+      Video not supported
+    </video>
+    <p>Video file not available currently</p><br>
+
+    <h1>Audio</h1>
+    <audio id="myaudio" src="http://www.freesound.org/data/previews/95/95026_57789-lq.mp3" controls>
+      Audio not supported
+    </audio>
+    <div>
+      <p>Customised</p>
+      <button onclick="document.getElementById('myaudio').play()">Play</button>
+      <button onclick="document.getElementById('myaudio').pause()">Pause</button>
+      <button onclick="document.getElementById('myaudio').volume+=0.1">Volume up</button>
+      <button onclick="document.getElementById('myaudio').volume-=0.1">Volume down</button>
+    </div>
+    <script>
+      var v = document.getElementById('myvideo');
+      v.play();
+    </script>
+  </body>
+</html>
